@@ -16,7 +16,7 @@
     
     <?php  
       foreach ($qt as $usuarios) {
-        echo '<div class="alert alert-dark " style="width: 160px;float:left;margin-right:20px;">
+        echo '<div class="alert alert-dark float-left mr-2" style="width: 15rem;">
           <img src="assets/img/null.png" width="100" class="border" style="margin: 10px;">
           <p>'. utf8_encode($usuarios['nome']) .'</p>
           <small>Idade: '.$usuarios['idade'].'</small>
