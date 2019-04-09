@@ -1,0 +1,3 @@
+CREATE DATABASE estrutura_mvc;
+
+useestrutura_mvc;
