@@ -1,0 +1,108 @@
+body{
+	margin: 0;
+	background-color: #eee;
+	font-family: sans-serif;
+}
+.top{
+	height: 40px;
+	background-color: #333;
+	color: #fff;
+}
+.topoLeft{
+	float: left;
+}
+.toporight{
+	float: right;
+}
+.top a{
+	color: #fff;
+	text-decoration: none;
+	
+}
+.divLine {
+	float: right;
+	height: 40px;
+	line-height: 40px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.divLine:hover{
+	background-color: #555;
+}
+.cursoitem{
+	width: 310px;
+	float: left;
+	margin-left: 10px;
+	margin-right: 10px;
+	border:2px solid #ccc;
+	border-radius: 10px;
+	text-align: center;
+	margin-bottom: 20px;
+}
+.cursoinfo{
+	height: 80px;
+	background-color: #ccc;
+}
+.cursoinfo img{
+	float: left;
+	margin-right: 20px;
+	margin-left:20px;
+	margin-top: 10px;
+	border-radius: 20px;
+}
+.cursoinfo h3{
+	margin: 0;
+	padding-top: 10px;
+
+}
+.curso_left{
+	width: 30%;
+	min-height: 300px;
+	float: left;
+	background-color: #DDD;
+	overflow-y:scroll;
+}
+.curso_left a{
+	color: #000;
+	text-decoration: none;
+}
+.curso_right{
+	width: 70%;
+	min-height: 300px;
+	float:left;
+	overflow-y:scroll;
+}
+.modulo{
+	height: 30px;
+	line-height: 40px;
+	padding-left: 20px;
+	background-color: #bbb;
+}
+.aula{
+	height: 30px;
+	line-height: 30px;
+	padding-left: 30px;
+}
+.aula:hover{
+	background-color: #aaa;
+}
+.form_duvida textarea{
+ 	width:98%;
+ 	height: 150px; 
+ 	border-radius: 10px;
+}
+.resposta_certa{
+	border:1px solid #e1e1e1;
+	padding: 10px;
+	text-align: center;
+	margin: auto;
+	background-color: #28a745;
+}
+
+.resposta_errada{
+	border:1px solid #e1e1e1;
+	padding: 10px;
+	text-align: center;
+	margin: auto;
+	background-color: #dc3545;
+}

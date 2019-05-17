@@ -1,15 +1,13 @@
+<h1>Seus Cursos</h1>
 
-    <title>home</title>
-  </head>
-  <body>
+<?php foreach($cursos as $curso): ?>
 
-  	<div class="container">
-  		<?php print_r($nome) ?>
-	<h1>Bem vindo <?php echo utf8_encode($usuario['nome']) ?>, você tem <?php echo $usuario['idade'] ?>?</h1>
-	<h3> Você tem <?php  echo $quant; ?> anuncios</h3>
+<a href="<?php echo BASE; ?>cursos/entrar/<?php echo $curso['id_curso']; ?>">
+	<div class="cursoitem">
+		<img src="<?php echo BASE;?>assets/images/img_cursos/<?php echo $curso['imagem'] ;?>" border="0" width="100%" height="250px"; /><br><br>
+		<strong><?php echo $curso['nome']; ?></strong><br><br>
+		<?php echo $curso['descricao']; ?> 
+	</div>
+</a>
 
-	<br>
-	<a href="galeria" class="btn btn-dark">Galeria</a>
-
-  	</div>
-
+<?php endforeach; ?>

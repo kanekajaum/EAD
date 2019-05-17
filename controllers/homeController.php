@@ -1,20 +1,31 @@
 <?php   
 
 class homeController extends controller{
-	
-	public function index(){
-		$anuncios = new Anuncios();
-		$usuarios = new Usuarios();
-
-		$dados = array(
-				'quant' => $anuncios->getQuantidade(),
-				'usuario' =>  $usuarios->getUsuario(2)
-
-		);
+	public function __construct(){
+		$alunos = new Alunos();
+		if (!$alunos->isLogged()) {
+			header("Location: ".BASE."login");
 		
-		// $this->loadView('home', $dados);
+		}
+	}
+	public function index(){
+		$dados = array(
+			'info' => array(),
+			'cursos' => array()
+		);
+
+		$alunos = new Alunos();
+		$alunos->setAlunos($_SESSION['lgaluno']);
+		$dados['info'] = $alunos;
+
+		$cursos = new Cursos();
+		$dados['cursos'] = $cursos->getCursosDoAluno($alunos->getId());
+
+
 		$this->loadTemplate('home', $dados);
 	}
+
+
 
 
 	
