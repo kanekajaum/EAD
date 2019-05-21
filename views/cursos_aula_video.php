@@ -18,7 +18,12 @@
 	<iframe id="video" style="width: 98%;" src="//player.vimeo.com/video/<?php echo $aula_info['url']; ?>"></iframe>
 	<?php print_r($aula_info['descricao']) ; ?>
 	<br><br>
-	<button onclick="MarcarAssistido(this)" data-id="<?php echo $aula_info['id']; ?>">Marcar como Assistido &#10003;</button>
+	<?php if ($aula_info['assistido'] == '1'): ?>
+		<?php echo "Esta aula já foi assistida." ?>
+	<?php else: ?>
+		<button onclick="MarcarAssistido(this)" data-id="<?php echo $aula_info['id']; ?>">Marcar como Assistido &#10003;</button>
+	<?php endif; ?>
+	
 	<hr>
 	<h3>Dúvidas? Envie sua pergunta!</h3>
 	<form method="POST" class="form_duvida">
